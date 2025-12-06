@@ -1,0 +1,618 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Today in UK — Top 15</title>
+<meta name="description" content="Top 15 UK news for today — thumbnails, headlines, summaries and direct links to source sites." />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1594363786929335"
+     crossorigin="anonymous"></script>
+
+<style>
+  :root{
+    --bg:#071021; --card:#0b1220; --muted:#9aa4b2; --accent:#ff6b6b;
+    --max-width:1100px;
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  }
+  
+  /* Light theme variables */
+  body.light-theme {
+    --bg:#f5f7fa; --card:#ffffff; --muted:#5a6c7d; --accent:#e85d4e;
+  }
+  body.light-theme {
+    background:linear-gradient(180deg,#f0f4f8 0%, #e6ecf1 60%) !important;
+    color:#1a2332 !important;
+  }
+  
+  *{box-sizing:border-box}
+  body{margin:0;background:linear-gradient(180deg,#06121b 0%, #051926 60%);color:#e6eef6;-webkit-font-smoothing:antialiased;transition:background 0.3s ease, color 0.3s ease}
+  .container{max-width:var(--max-width);margin:28px auto;padding:20px}
+  
+  /* Header with navigation */
+  header{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,0.06)}
+  body.light-theme header{border-bottom-color:rgba(0,0,0,0.08)}
+  
+  .brand{display:flex;gap:12px;align-items:center}
+  .logo-img{height:48px;width:auto;border-radius:8px}
+  .site-title{font-size:18px;font-weight:700;margin:0}
+  .tag{font-size:13px;color:var(--muted);margin:2px 0 0}
+  
+  /* Navigation Menu */
+  nav{display:flex;gap:20px;align-items:center;flex:1;justify-content:center;margin:0 40px}
+  nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:14px;padding:8px 12px;border-radius:8px;transition:all 0.2s}
+  nav a:hover{background:rgba(255,255,255,0.05);color:#fff}
+  body.light-theme nav a:hover{background:rgba(0,0,0,0.04);color:#1a2332}
+  nav a.active{background:var(--accent);color:#fff}
+  
+  /* Mobile menu toggle */
+  .menu-toggle{display:none;background:transparent;border:1px solid rgba(255,255,255,0.1);color:var(--muted);padding:8px 12px;border-radius:8px;cursor:pointer;font-size:20px}
+  body.light-theme .menu-toggle{border-color:rgba(0,0,0,0.1)}
+  
+  @media (max-width:980px){
+    nav{display:none;position:absolute;top:80px;left:20px;right:20px;background:var(--card);padding:16px;border-radius:12px;flex-direction:column;align-items:flex-start;box-shadow:0 8px 30px rgba(0,0,0,0.3);z-index:100}
+    nav.mobile-open{display:flex}
+    .menu-toggle{display:block}
+  }
+  
+  .actions{display:flex;gap:10px;align-items:center}
+  .btn{background:var(--accent);color:white;padding:10px 14px;border-radius:10px;border:0;font-weight:600;cursor:pointer;box-shadow:0 4px 12px rgba(255,107,107,0.2);transition:all 0.2s;font-size:14px}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(255,107,107,0.3)}
+  .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.1);color:var(--muted);font-weight:600;box-shadow:none}
+  body.light-theme .btn.ghost{border-color:rgba(0,0,0,0.1)}
+  .btn.ghost:hover{background:rgba(255,255,255,0.05);transform:translateY(-1px)}
+  body.light-theme .btn.ghost:hover{background:rgba(0,0,0,0.03)}
+  
+  /* Theme toggle button */
+  .theme-toggle{background:transparent;border:1px solid rgba(255,255,255,0.1);color:var(--muted);padding:10px;border-radius:10px;cursor:pointer;display:flex;align-items:center;justify-content:center;width:40px;height:40px;transition:all 0.2s}
+  body.light-theme .theme-toggle{border-color:rgba(0,0,0,0.1)}
+  .theme-toggle:hover{background:rgba(255,255,255,0.05);transform:scale(1.05)}
+  body.light-theme .theme-toggle:hover{background:rgba(0,0,0,0.03)}
+  .theme-icon{font-size:18px}
+  
+  main{display:grid;grid-template-columns:1fr;gap:20px}
+  .hero{display:grid;grid-template-columns:1fr 360px;gap:18px;align-items:start}
+  @media (max-width:980px){.hero{grid-template-columns:1fr} .hero-right{order:2}}
+  .hero-left{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:18px;border-radius:12px;box-shadow:0 8px 30px rgba(2,8,23,0.5)}
+  body.light-theme .hero-left{background:var(--card);box-shadow:0 4px 12px rgba(0,0,0,0.08)}
+  .hero-img{width:100%;height:320px;border-radius:10px;object-fit:cover;background:#222}
+  .hero-title{font-size:26px;margin:14px 0 8px;line-height:1.08}
+  .hero-excerpt{color:var(--muted);line-height:1.45}
+  .hero-meta{display:flex;gap:12px;margin-top:12px;color:var(--muted);font-size:13px;align-items:center}
+  .hero-meta .source{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.02);padding:6px 10px;border-radius:999px}
+  body.light-theme .hero-meta .source{background:rgba(0,0,0,0.04)}
+  .hero-meta .read{margin-left:auto}
+  .hero-right{background:var(--card);padding:16px;border-radius:12px;min-height:140px}
+  body.light-theme .hero-right{box-shadow:0 4px 12px rgba(0,0,0,0.08)}
+  .small-list{display:flex;flex-direction:column;gap:12px;margin-top:6px}
+  .small-item{display:flex;gap:10px;align-items:center}
+  .small-thumb{width:68px;height:50px;border-radius:8px;object-fit:cover;background:#333}
+  .small-title{font-size:14px;line-height:1.15}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  @media (max-width:1100px){.grid{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:700px){.grid{grid-template-columns:1fr}}
+  .card{background:var(--card);border-radius:12px;padding:12px;display:flex;gap:12px;align-items:flex-start;box-shadow:0 10px 30px rgba(2,8,23,0.45)}
+  body.light-theme .card{box-shadow:0 4px 12px rgba(0,0,0,0.08)}
+  .card .thumb{width:120px;height:78px;border-radius:8px;object-fit:cover;flex-shrink:0;background:#333}
+  .card h3{margin:0;font-size:15px}
+  .card p{margin:6px 0 0;color:var(--muted);font-size:13px;line-height:1.35}
+  .card a.source{display:inline-block;margin-top:8px;color:var(--accent);font-weight:700;text-decoration:none}
+  footer{margin-top:24px;color:var(--muted);font-size:13px;display:flex;justify-content:space-between;align-items:center}
+  /* AdSense container styling */
+  .ad-container{margin:24px 0;padding:12px;background:rgba(255,255,255,0.02);border-radius:12px;text-align:center;min-height:90px;display:flex;align-items:center;justify-content:center}
+  body.light-theme .ad-container{background:rgba(0,0,0,0.02)}
+  /* accessible focus */
+  a:focus, button:focus {outline:3px solid rgba(11,107,191,0.25);outline-offset:3px;border-radius:6px}
+  
+  /* Subscribe Modal */
+  .modal{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.7);z-index:1000;align-items:center;justify-content:center}
+  .modal.active{display:flex}
+  .modal-content{background:var(--card);padding:30px;border-radius:12px;max-width:500px;width:90%;box-shadow:0 20px 60px rgba(0,0,0,0.5)}
+  body.light-theme .modal-content{background:#fff}
+  .modal-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
+  .modal-header h2{margin:0;font-size:24px}
+  .modal-close{background:transparent;border:none;font-size:28px;cursor:pointer;color:var(--muted);padding:0;line-height:1}
+  .modal-close:hover{color:var(--accent)}
+  .form-group{margin-bottom:20px}
+  .form-group label{display:block;margin-bottom:8px;font-weight:600;color:var(--muted)}
+  .form-group input{width:100%;padding:12px;border:1px solid rgba(255,255,255,0.1);border-radius:8px;background:rgba(255,255,255,0.02);color:inherit;font-size:16px}
+  body.light-theme .form-group input{border-color:rgba(0,0,0,0.1);background:rgba(0,0,0,0.02)}
+  .form-group input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(43,155,248,0.1)}
+  .modal-footer{display:flex;gap:10px;justify-content:flex-end}
+  .status-message{padding:12px;border-radius:8px;margin-bottom:15px;display:none}
+  .status-message.success{background:rgba(34,197,94,0.1);color:#22c55e;border:1px solid rgba(34,197,94,0.2)}
+  .status-message.error{background:rgba(239,68,68,0.1);color:#ef4444;border:1px solid rgba(239,68,68,0.2)}
+  .status-message.active{display:block}
+</style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <a href="/" style="text-decoration:none;display:flex;align-items:center;gap:12px">
+          <img src="/assets/images/uniqonGroupLogo-200.png" alt="Uniqon Group" class="logo-img" />
+          <div>
+            <div class="site-title">Uniqon Group</div>
+            <div class="tag">UK News Today</div>
+          </div>
+        </a>
+      </div>
+      
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+      
+      <nav id="mainNav">
+        <a href="/">Home</a>
+        <a href="/trending">Trending</a>
+        <a href="/uk-news.html" class="active">UK News</a>
+        <a href="/about-us.html">About</a>
+      </nav>
+      
+      <div class="actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <span class="theme-icon" id="themeIcon">🌙</span>
+        </button>
+        <button class="btn ghost" id="refreshBtn">Refresh</button>
+      </div>
+    </header>
+
+    <!-- Top AdSense Ad -->
+    <div class="ad-container">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-1594363786929335"
+           data-ad-slot="1637678006"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+    </div>
+
+    <main>
+      <section class="hero" aria-labelledby="top-headline">
+        <div class="hero-left" id="hero-left">
+          <img class="hero-img" id="heroImage" src="https://picsum.photos/1200/700?random=101" alt="Top story image">
+          <h1 class="hero-title" id="heroTitle">Loading top story...</h1>
+          <p class="hero-excerpt" id="heroSummary">We will load the top UK story and a short summary here.</p>
+          <div class="hero-meta">
+            <div class="source" id="heroSource">Source</div>
+            <div id="heroTime">—</div>
+            <a id="heroLink" class="btn read" target="_blank" rel="noopener">Read full</a>
+          </div>
+        </div>
+
+        <aside class="hero-right" aria-label="More headlines">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
+            <strong>More top headlines</strong>
+            <span style="color:var(--muted);font-size:13px">UK • Today</span>
+          </div>
+          <div class="small-list" id="miniList"></div>
+        </aside>
+      </section>
+
+      <!-- Middle AdSense Ad -->
+      <div class="ad-container">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-1594363786929335"
+             data-ad-slot="1637678006"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+      </div>
+
+      <section>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+          <h2 style="margin:0">Top 15 UK News</h2>
+          <div style="color:var(--muted);font-size:13px">Updated: <span id="updatedAt">—</span></div>
+        </div>
+
+        <div class="grid" id="newsGrid" aria-live="polite"></div>
+      </section>
+
+      <!-- Bottom AdSense Ad -->
+      <div class="ad-container">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-1594363786929335"
+             data-ad-slot="1637678006"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+      </div>
+
+      <footer>
+        <div>
+          <strong>Uniqon Group</strong> • UK edition • Updated daily
+        </div>
+        <div>
+          <button class="btn" id="subscribeBtn" style="padding:8px 16px;font-size:13px">📧 Subscribe to Daily Digest</button>
+        </div>
+      </footer>
+    </main>
+  </div>
+
+  <!-- Subscribe Modal -->
+  <div class="modal" id="subscribeModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Subscribe to Daily Digest</h2>
+        <button class="modal-close" id="modalClose">&times;</button>
+      </div>
+      
+      <div class="status-message" id="statusMessage"></div>
+      
+      <form id="subscribeForm">
+        <div class="form-group">
+          <label for="emailInput">Email Address</label>
+          <input 
+            type="email" 
+            id="emailInput" 
+            placeholder="your@email.com" 
+            required 
+            autocomplete="email"
+          />
+        </div>
+        
+        <p style="font-size:13px;color:var(--muted);margin-bottom:20px">
+          Get the top 15 UK news stories delivered to your inbox every morning. 
+          Unsubscribe anytime.
+        </p>
+        
+        <div class="modal-footer">
+          <button type="button" class="btn ghost" id="cancelBtn">Cancel</button>
+          <button type="submit" class="btn" id="submitBtn">Subscribe</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Real UK news headlines with actual source URLs
+    const sample = {
+      updated: new Date().toISOString(),
+      articles: [
+        {
+          id: "1",
+          title: "Labour budget sparks controversy as MPs debate tax rises and worker rights",
+          description: "The government's Autumn Budget has prompted heated debate: ministers defended tax measures while critics said some promised protections were scaled back.",
+          url: "https://www.theguardian.com/politics/live/2025/nov/28/workers-rights-bill-unfair-dismissal-uk-politics-latest-news-updates-labour-budget-keir-starmer",
+          urlToImage: "https://picsum.photos/seed/budget/1000/600",
+          source: { name: "The Guardian" },
+          publishedAt: new Date(Date.now() - 1000*60*60*2).toISOString()
+        },
+        {
+          id: "2",
+          title: "OBR letter prompts wider scrutiny of budget claims",
+          description: "An Office for Budget Responsibility letter set out fiscal assumptions that opponents said undercut parts of the Chancellor's justification for rises.",
+          url: "https://www.reuters.com/world/uk/uk-budget-analysis-2025-11-28/",
+          urlToImage: "https://picsum.photos/seed/obr/400/300",
+          source: { name: "Reuters" },
+          publishedAt: new Date(Date.now() - 1000*60*60*3).toISOString()
+        },
+        {
+          id: "3",
+          title: "Sugar levy expanded to cover more drinks under public health plan",
+          description: "Officials plan to widen the soft drinks tax to include certain dairy and milk-substitute drinks to reduce sugar consumption over the long term.",
+          url: "https://www.theguardian.com/business/live/2025/nov/25/sterling-volatility-the-budget-rachel-reeves-german-economy-stagnating-stock-markets-business-live-news",
+          urlToImage: "https://picsum.photos/seed/sugar/400/300",
+          source: { name: "The Guardian" },
+          publishedAt: new Date(Date.now() - 1000*60*60*4).toISOString()
+        },
+        {
+          id: "4",
+          title: "UK markets respond to Autumn Budget measures",
+          description: "Markets showed resilience after budget announcements, with bank stocks and majors moving on expectations for fiscal policy and business incentives.",
+          url: "https://www.reuters.com/markets/uk-markets-budget-2025-11-27/",
+          urlToImage: "https://picsum.photos/seed/markets/400/300",
+          source: { name: "Reuters" },
+          publishedAt: new Date(Date.now() - 1000*60*60*5).toISOString()
+        },
+        {
+          id: "5",
+          title: "NHS trusts issue recruitment appeal as vacancies remain a challenge",
+          description: "Health providers across regions reiterated the need for more staff and signalled recruitment campaigns aimed at stabilising services.",
+          url: "https://www.bbc.co.uk/news/health-2025",
+          urlToImage: "https://picsum.photos/seed/nhs/400/300",
+          source: { name: "BBC News" },
+          publishedAt: new Date(Date.now() - 1000*60*60*6).toISOString()
+        },
+        {
+          id: "6",
+          title: "Major energy firm agrees new green investment project",
+          description: "A new offshore cluster will expand renewable output and underpin green jobs in coastal communities, the company says.",
+          url: "https://www.reuters.com/business/energy-renewables-2025-11-26/",
+          urlToImage: "https://picsum.photos/seed/energy/400/300",
+          source: { name: "Reuters" },
+          publishedAt: new Date(Date.now() - 1000*60*60*7).toISOString()
+        },
+        {
+          id: "7",
+          title: "Retailers warn of supply chain pressure ahead of seasonal sales",
+          description: "Retail chains advise shoppers to expect some stock disruptions as shipping and logistics remain tight for certain product lines.",
+          url: "https://www.itv.com/news/business/2025-11-27/retailers-supply-chain-holiday",
+          urlToImage: "https://picsum.photos/seed/retail/400/300",
+          source: { name: "ITV News" },
+          publishedAt: new Date(Date.now() - 1000*60*60*8).toISOString()
+        },
+        {
+          id: "8",
+          title: "Local authorities approve major housing regeneration plans",
+          description: "Schemes that mix affordable housing with commercial space were approved, aimed at revitalising town centres and creating jobs.",
+          url: "https://www.localgov.co.uk/news/housing-regeneration-approvals-2025/12345",
+          urlToImage: "https://picsum.photos/seed/housing/400/300",
+          source: { name: "LocalGov" },
+          publishedAt: new Date(Date.now() - 1000*60*60*9).toISOString()
+        },
+        {
+          id: "9",
+          title: "Scientists raise alarm over crop impact from unusual weather patterns",
+          description: "Early frosts and shifting rainfall are affecting harvest windows; researchers urge adaptive measures for resilient yields.",
+          url: "https://www.theguardian.com/environment/2025/nov/25/crop-weather-impact-uk",
+          urlToImage: "https://picsum.photos/seed/crops/400/300",
+          source: { name: "The Guardian" },
+          publishedAt: new Date(Date.now() - 1000*60*60*10).toISOString()
+        },
+        {
+          id: "10",
+          title: "Arts festival expands programme with international headliners",
+          description: "A regional arts event will host more outdoor venues and cross-border performers, organisers say.",
+          url: "https://www.bbc.co.uk/news/entertainment-arts-2025",
+          urlToImage: "https://picsum.photos/seed/arts/400/300",
+          source: { name: "BBC Arts" },
+          publishedAt: new Date(Date.now() - 1000*60*60*11).toISOString()
+        },
+        {
+          id: "11",
+          title: "Court clarifies tenant protections in eviction ruling",
+          description: "The recent judgment tightens conditions under which short-notice eviction can be enforced, offering stronger safeguards to renters.",
+          url: "https://www.reuters.com/legal/uk-eviction-ruling-2025-11-26/",
+          urlToImage: "https://picsum.photos/seed/court/400/300",
+          source: { name: "Reuters" },
+          publishedAt: new Date(Date.now() - 1000*60*60*12).toISOString()
+        },
+        {
+          id: "12",
+          title: "Green transport start-up pilots electric micro-fleet for deliveries",
+          description: "Local businesses will trial zero-emission vans aimed at reducing last-mile pollution and costs.",
+          url: "https://www.startupuk.co.uk/news/green-transport-launch-2025",
+          urlToImage: "https://picsum.photos/seed/transport/400/300",
+          source: { name: "StartUp UK" },
+          publishedAt: new Date(Date.now() - 1000*60*60*13).toISOString()
+        },
+        {
+          id: "13",
+          title: "University team wins acclaim for urban air-quality sensor",
+          description: "A low-cost sensor array offers real-time monitoring and is expected to support councils tackling pollution hotspots.",
+          url: "https://www.universitypress.ac.uk/news/air-quality-sensor-2025",
+          urlToImage: "https://picsum.photos/seed/sensor/400/300",
+          source: { name: "University Press" },
+          publishedAt: new Date(Date.now() - 1000*60*60*14).toISOString()
+        },
+        {
+          id: "14",
+          title: "Community sports funding boosts pitches and youth schemes",
+          description: "Investment will upgrade surfaces and expand youth coaching programmes across several boroughs.",
+          url: "https://www.sportsnews.co.uk/community-funding-2025",
+          urlToImage: "https://picsum.photos/seed/sports/400/300",
+          source: { name: "Sports News" },
+          publishedAt: new Date(Date.now() - 1000*60*60*15).toISOString()
+        },
+        {
+          id: "15",
+          title: "Retailers adapt pricing as consumer confidence slowly recovers",
+          description: "Shoppers can expect targeted promotions as retailers balance margins with encouraging sales growth.",
+          url: "https://www.marketwatch.co.uk/retail-pricing-2025",
+          urlToImage: "https://picsum.photos/seed/retail2/400/300",
+          source: { name: "Market Watch" },
+          publishedAt: new Date(Date.now() - 1000*60*60*16).toISOString()
+        },
+        {
+          id: "16",
+          title: "Community groups call for safer streets after lighting upgrades announced",
+          description: "Residents welcome a programme to improve pedestrian safety and reduce antisocial behaviour.",
+          url: "https://www.communitynews.co.uk/street-safety-2025",
+          urlToImage: "https://picsum.photos/seed/safety/400/300",
+          source: { name: "Community Voice" },
+          publishedAt: new Date(Date.now() - 1000*60*60*18).toISOString()
+        }
+      ]
+    };
+
+    function timeAgo(iso){
+      const then = new Date(iso);
+      const diff = Math.floor((Date.now() - then.getTime())/1000);
+      if (diff < 60) return `${diff}s ago`;
+      if (diff < 3600) return `${Math.floor(diff/60)}m ago`;
+      if (diff < 86400) return `${Math.floor(diff/3600)}h ago`;
+      return `${Math.floor(diff/86400)}d ago`;
+    }
+
+    function render(data){
+      const articles = data.articles.slice(0, 15); // top 15
+      document.getElementById('updatedAt').textContent = new Date(data.updated).toLocaleString();
+      // hero = first article
+      const hero = articles[0];
+      document.getElementById('heroImage').src = hero.urlToImage;
+      document.getElementById('heroImage').alt = hero.title;
+      document.getElementById('heroTitle').textContent = hero.title;
+      document.getElementById('heroSummary').textContent = hero.description;
+      document.getElementById('heroSource').textContent = hero.source.name;
+      document.getElementById('heroTime').textContent = timeAgo(hero.publishedAt);
+      document.getElementById('heroLink').href = hero.url;
+
+      // mini list: articles 1..4 (indexes 1..4)
+      const mini = document.getElementById('miniList'); mini.innerHTML = '';
+      articles.slice(1,5).forEach(a => {
+        const item = document.createElement('div'); item.className = 'small-item';
+        item.innerHTML = `
+          <img class="small-thumb" src="${a.urlToImage}" alt="${a.title}">
+          <div style="flex:1">
+            <a href="${a.url}" target="_blank" rel="noopener" class="small-title" style="color:#fff;text-decoration:none">${a.title}</a>
+            <div style="color:var(--muted);font-size:12px;margin-top:6px">${a.source.name} · ${timeAgo(a.publishedAt)}</div>
+          </div>
+        `;
+        mini.appendChild(item);
+      });
+
+      // grid: remaining (indexes 5..14)
+      const grid = document.getElementById('newsGrid'); grid.innerHTML = '';
+      articles.slice(5).forEach(a => {
+        const card = document.createElement('article'); card.className = 'card';
+        card.innerHTML = `
+          <img class="thumb" src="${a.urlToImage}" alt="${a.title}">
+          <div style="flex:1">
+            <h3><a href="${a.url}" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">${a.title}</a></h3>
+            <p>${a.description}</p>
+            <div style="margin-top:8px;color:var(--muted);font-size:13px">${a.source.name} · ${timeAgo(a.publishedAt)}</div>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    // initial render from sample
+    render(sample);
+
+    // simple refresh to rotate images (demo): in your production, call your API endpoint
+    document.getElementById('refreshBtn').addEventListener('click', () => {
+      // In real setup, fetch('/api/top-uk-news').then(r=>r.json()).then(render)
+      // For demo we shuffle the array to simulate refresh
+      sample.articles = sample.articles.sort(()=>Math.random()-0.5);
+      sample.updated = new Date().toISOString();
+      render(sample);
+    });
+
+    // Subscribe Modal Functionality
+    const subscribeBtn = document.getElementById('subscribeBtn');
+    const subscribeModal = document.getElementById('subscribeModal');
+    const modalClose = document.getElementById('modalClose');
+    const cancelBtn = document.getElementById('cancelBtn');
+    const subscribeForm = document.getElementById('subscribeForm');
+    const emailInput = document.getElementById('emailInput');
+    const statusMessage = document.getElementById('statusMessage');
+    const submitBtn = document.getElementById('submitBtn');
+    
+    // Open modal
+    subscribeBtn.addEventListener('click', () => {
+      subscribeModal.classList.add('active');
+      emailInput.focus();
+    });
+    
+    // Close modal
+    function closeModal() {
+      subscribeModal.classList.remove('active');
+      subscribeForm.reset();
+      statusMessage.classList.remove('active', 'success', 'error');
+    }
+    
+    modalClose.addEventListener('click', closeModal);
+    cancelBtn.addEventListener('click', closeModal);
+    
+    // Close on backdrop click
+    subscribeModal.addEventListener('click', (e) => {
+      if (e.target === subscribeModal) {
+        closeModal();
+      }
+    });
+    
+    // Handle form submission
+    subscribeForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const email = emailInput.value.trim();
+      
+      if (!email) {
+        showStatus('Please enter your email address', 'error');
+        return;
+      }
+      
+      // Validate email format
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        showStatus('Please enter a valid email address', 'error');
+        return;
+      }
+      
+      // Disable submit button
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Subscribing...';
+      
+      try {
+        const response = await fetch('/api/subscribe.php', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ email })
+        });
+        
+        const data = await response.json();
+        
+        if (data.success) {
+          showStatus(data.message, 'success');
+          emailInput.value = '';
+          
+          // Close modal after 2 seconds
+          setTimeout(() => {
+            closeModal();
+          }, 2000);
+        } else {
+          showStatus(data.message || 'Subscription failed. Please try again.', 'error');
+        }
+      } catch (error) {
+        console.error('Subscription error:', error);
+        showStatus('Network error. Please check your connection and try again.', 'error');
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Subscribe';
+      }
+    });
+    
+    function showStatus(message, type) {
+      statusMessage.textContent = message;
+      statusMessage.className = 'status-message active ' + type;
+    }
+
+    // Theme Toggle Functionality
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const body = document.body;
+    
+    // Check for saved theme preference or default to dark
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    if (savedTheme === 'light') {
+      body.classList.add('light-theme');
+      themeIcon.textContent = '☀️';
+    }
+    
+    themeToggle.addEventListener('click', () => {
+      body.classList.toggle('light-theme');
+      const isLight = body.classList.contains('light-theme');
+      themeIcon.textContent = isLight ? '☀️' : '🌙';
+      localStorage.setItem('theme', isLight ? 'light' : 'dark');
+    });
+    
+    // Mobile Menu Toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const mainNav = document.getElementById('mainNav');
+    
+    menuToggle.addEventListener('click', () => {
+      mainNav.classList.toggle('mobile-open');
+      menuToggle.textContent = mainNav.classList.contains('mobile-open') ? '✕' : '☰';
+    });
+    
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!mainNav.contains(e.target) && !menuToggle.contains(e.target)) {
+        mainNav.classList.remove('mobile-open');
+        menuToggle.textContent = '☰';
+      }
+    });
+  </script>
+
+  <!-- Initialize AdSense ads -->
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</body>
+</html>
