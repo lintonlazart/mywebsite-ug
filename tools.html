@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-adsense-account" content="ca-pub-1594363786929335">
+    <title>Tools - Uniqon Group</title>
+    <meta name="description" content="Free online tools and calculators - Date calculator, BMI calculator, currency converter, and more useful utilities.">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="/assets/images/favicon-64.png">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1594363786929335" crossorigin="anonymous"></script>
+    
+    <style>
+        :root{
+            --bg:#071021;
+            --card:#0b1220;
+            --muted:#9aa4b2;
+            --accent:#ff6b6b;
+            --text:#e1e6ed;
+        }
+        body.light-theme{
+            --bg:#f8f9fa;
+            --card:#ffffff;
+            --muted:#6c757d;
+            --accent:#dc3545;
+            --text:#212529;
+        }
+        
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;transition:all 0.3s ease}
+        
+        /* Header */
+        header{background:var(--card);border-bottom:1px solid rgba(255,255,255,0.1);padding:16px 24px;position:sticky;top:0;z-index:100;backdrop-filter:blur(10px);box-shadow:0 4px 20px rgba(2,8,23,0.35);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+        body.light-theme header{border-bottom-color:rgba(0,0,0,0.1);box-shadow:0 2px 8px rgba(0,0,0,0.08)}
+        
+        .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--text);transition:transform 0.3s ease}
+        .brand:hover{transform:translateX(-4px)}
+        .logo-img{height:48px;width:auto}
+        .site-title{font-size:20px;font-weight:700;letter-spacing:-0.5px}
+        .tag{font-size:12px;color:var(--muted)}
+        
+        .menu-toggle{display:none;background:none;border:none;color:var(--text);font-size:24px;cursor:pointer}
+        
+        nav{display:flex;gap:8px}
+        nav a{color:var(--text);text-decoration:none;padding:8px 16px;border-radius:8px;transition:all 0.2s;font-weight:500;font-size:14px}
+        nav a:hover{background:rgba(255,255,255,0.1)}
+        body.light-theme nav a:hover{background:rgba(0,0,0,0.05)}
+        nav a.active{background:linear-gradient(135deg,#2b9bf8,#6b5cff);color:#fff}
+        
+        .actions{display:flex;gap:12px;align-items:center}
+        .theme-toggle{background:var(--card);border:1px solid rgba(255,255,255,0.1);padding:8px 12px;border-radius:8px;cursor:pointer;color:var(--text);transition:all 0.2s;font-size:18px}
+        body.light-theme .theme-toggle{border-color:rgba(0,0,0,0.1)}
+        .theme-toggle:hover{background:rgba(255,255,255,0.05);transform:scale(1.05)}
+        body.light-theme .theme-toggle:hover{background:rgba(0,0,0,0.03)}
+        
+        /* Main Content */
+        main{max-width:1200px;margin:0 auto;padding:40px 24px}
+        
+        .page-header{text-align:center;margin-bottom:48px}
+        .page-header h1{font-size:42px;margin-bottom:12px;background:linear-gradient(135deg,#2b9bf8,#6b5cff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+        .page-header p{font-size:18px;color:var(--muted)}
+        
+        /* Tools Grid */
+        .tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px;margin-bottom:40px}
+        
+        .tool-card{background:var(--card);border-radius:12px;padding:32px;box-shadow:0 10px 30px rgba(2,8,23,0.45);transition:all 0.3s ease;border:1px solid rgba(255,255,255,0.05);text-decoration:none;color:var(--text);display:block}
+        body.light-theme .tool-card{box-shadow:0 4px 12px rgba(0,0,0,0.08);border-color:rgba(0,0,0,0.05)}
+        .tool-card:hover{transform:translateY(-4px);box-shadow:0 15px 40px rgba(2,8,23,0.6)}
+        body.light-theme .tool-card:hover{box-shadow:0 8px 20px rgba(0,0,0,0.15)}
+        
+        .tool-icon{font-size:48px;margin-bottom:16px}
+        .tool-title{font-size:20px;font-weight:700;margin-bottom:8px}
+        .tool-description{color:var(--muted);font-size:14px;line-height:1.6}
+        
+        /* Footer */
+        footer{background:var(--card);padding:32px 24px;text-align:center;border-top:1px solid rgba(255,255,255,0.1);margin-top:60px}
+        body.light-theme footer{border-top-color:rgba(0,0,0,0.1)}
+        footer p{color:var(--muted);font-size:14px}
+        footer a{color:#2b9bf8;text-decoration:none}
+        footer a:hover{text-decoration:underline}
+        
+        /* Mobile Responsive */
+        @media(max-width:980px){
+            .menu-toggle{display:block}
+            nav{display:none;width:100%;order:4}
+            nav.active{display:flex;flex-direction:column}
+            nav a{padding:12px 16px}
+            header{justify-content:space-between}
+            .tools-grid{grid-template-columns:1fr}
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="brand-container">
+            <a href="/" class="brand">
+                <img src="/assets/images/uniqonGroupLogo-200.png" alt="Uniqon Group" class="logo-img" />
+                <div>
+                    <div class="site-title">Uniqon Group</div>
+                    <div class="tag">Tools & Utilities</div>
+                </div>
+            </a>
+        </div>
+        
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+        
+        <nav id="mainNav" aria-label="Main navigation">
+            <a href="/uk-news.html">Home</a>
+            <a href="/trending.html">Trending</a>
+            <a href="/tools.html" class="active" aria-current="page">Tools</a>
+            <a href="/about-us.html">About</a>
+        </nav>
+        
+        <div class="actions">
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <span class="theme-icon" id="themeIcon">🌙</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Top AdSense Ad - Horizontal Unit -->
+    <div class="ad-container" style="text-align:center;margin:24px auto;max-width:1200px;min-height:90px">
+        <ins class="adsbygoogle"
+             style="display:block;min-height:100px"
+             data-ad-client="ca-pub-1594363786929335"
+             data-ad-slot="1637678006"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+    </div>
+
+    <main>
+        <div class="page-header">
+            <h1>🛠️ Free Online Tools</h1>
+            <p>Useful calculators and utilities to make your life easier</p>
+        </div>
+
+        <div class="tools-grid">
+            <a href="/tools/date-difference-calculator.html" class="tool-card">
+                <div class="tool-icon">📅</div>
+                <h2 class="tool-title">Date Difference Calculator</h2>
+                <p class="tool-description">Calculate the number of days, weeks, months, or years between two dates.</p>
+            </a>
+
+            <a href="/tools/age-calculator.html" class="tool-card">
+                <div class="tool-icon">🎂</div>
+                <h2 class="tool-title">Age Calculator</h2>
+                <p class="tool-description">Calculate your exact age in years, months, and days from your birthdate.</p>
+            </a>
+
+            <a href="/tools/bmi-calculator.html" class="tool-card">
+                <div class="tool-icon">⚖️</div>
+                <h2 class="tool-title">BMI Calculator</h2>
+                <p class="tool-description">Calculate your Body Mass Index and check if you're in a healthy weight range.</p>
+            </a>
+
+            <a href="/tools/percentage-calculator.html" class="tool-card">
+                <div class="tool-icon">🔢</div>
+                <h2 class="tool-title">Percentage Calculator</h2>
+                <p class="tool-description">Calculate percentages, percentage increases, and percentage differences.</p>
+            </a>
+
+            <a href="/tools/loan-calculator.html" class="tool-card">
+                <div class="tool-icon">💰</div>
+                <h2 class="tool-title">Loan Calculator</h2>
+                <p class="tool-description">Calculate monthly loan payments and see the total interest over time.</p>
+            </a>
+
+            <a href="/tools/unit-converter.html" class="tool-card">
+                <div class="tool-icon">📏</div>
+                <h2 class="tool-title">Unit Converter</h2>
+                <p class="tool-description">Convert between different units of measurement (length, weight, temperature).</p>
+            </a>
+
+            <a href="/tools/timezone-converter.html" class="tool-card">
+                <div class="tool-icon">🌍</div>
+                <h2 class="tool-title">Time Zone Converter</h2>
+                <p class="tool-description">Convert times between different time zones around the world.</p>
+            </a>
+
+            <a href="/tools/currency-converter.html" class="tool-card">
+                <div class="tool-icon">💱</div>
+                <h2 class="tool-title">Currency Converter</h2>
+                <p class="tool-description">Convert between major world currencies with up-to-date exchange rates.</p>
+            </a>
+
+            <a href="/tools/text-counter.html" class="tool-card">
+                <div class="tool-icon">📝</div>
+                <h2 class="tool-title">Text Counter</h2>
+                <p class="tool-description">Count words, characters, sentences, and paragraphs in your text.</p>
+            </a>
+
+            <a href="/tools/password-generator.html" class="tool-card">
+                <div class="tool-icon">🔐</div>
+                <h2 class="tool-title">Password Generator</h2>
+                <p class="tool-description">Generate strong, secure random passwords with customizable options.</p>
+            </a>
+        </div>
+
+        <!-- Middle AdSense Ad - Rectangle Unit -->
+        <div class="ad-container" style="text-align:center;margin:32px auto;max-width:1200px;min-height:250px">
+            <ins class="adsbygoogle"
+                 style="display:block;min-height:250px"
+                 data-ad-client="ca-pub-1594363786929335"
+                 data-ad-slot="6726353154"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Uniqon Group. All rights reserved. | <a href="/about-us.html">About</a> | <a href="/uk-news.html">UK News</a> | <a href="/trending.html">Trending</a></p>
+    </footer>
+
+    <script>
+        // Initialize all AdSense ads
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+
+    <script>
+        // Theme Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+        const body = document.body;
+        
+        // Check saved theme preference or default to dark
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        if (savedTheme === 'light') {
+            body.classList.add('light-theme');
+            themeIcon.textContent = '☀️';
+        }
+        
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('light-theme');
+            const isLight = body.classList.contains('light-theme');
+            themeIcon.textContent = isLight ? '☀️' : '🌙';
+            localStorage.setItem('theme', isLight ? 'light' : 'dark');
+        });
+        
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const mainNav = document.getElementById('mainNav');
+        
+        menuToggle.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+            menuToggle.textContent = mainNav.classList.contains('active') ? '✕' : '☰';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-adsense-account" content="ca-pub-1594363786929335">
+    <meta name="description" content="Calculate your Body Mass Index (BMI) and check your health category">
+    <title>BMI Calculator - Uniqon Group</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32.png">
+    <link rel="stylesheet" href="/assets/css/tool-style.css">
+    <style>
+        .bmi-ranges{text-align:left;margin-top:32px;padding-top:24px;border-top:1px solid var(--border)}
+        .bmi-ranges h3{margin-bottom:16px;color:var(--accent)}
+        .range-item{display:flex;justify-content:space-between;padding:8px 0;color:var(--muted)}
+        .category{font-size:24px;font-weight:600;margin-bottom:16px}
+        .category-info{color:var(--muted);margin-bottom:24px}
+    </style>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1594363786929335" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="brand">
+                <a href="/uk-news.html" class="brand">
+                    <img src="/assets/images/uniqonGroupLogo-200.png" alt="Uniqon Group" class="logo-img"/>
+                    <div>
+                        <div class="site-title">Uniqon Group</div>
+                        <div class="tag">Useful Tools</div>
+                    </div>
+                </a>
+            </div>
+            <nav id="mainNav" aria-label="Main navigation">
+                <a href="/uk-news.html">Home</a>
+                <a href="/trending.html">Trending</a>
+                <a href="/tools.html" class="active" aria-current="page">Tools</a>
+                <a href="/about-us.html">About</a>
+            </nav>
+            <div class="actions">
+                <button class="theme-toggle" id="themeToggle"><span id="themeIcon">🌙</span></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Top AdSense Ad - Horizontal Unit -->
+    <div class="ad-container" style="text-align:center;margin:24px auto;max-width:1200px;min-height:90px">
+        <ins class="adsbygoogle"
+             style="display:block;min-height:100px"
+             data-ad-client="ca-pub-1594363786929335"
+             data-ad-slot="1637678006"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+    </div>
+    
+    <div class="tool-container">
+        <a href="/tools.html" class="back-link">← Back to Tools</a>
+        <h1>BMI Calculator</h1>
+        <p class="tool-description">Calculate your Body Mass Index (BMI) and check your health category.</p>
+        <div class="tool-card">
+            <div class="input-group">
+                <label for="unit">Unit System</label>
+                <select id="unit" onchange="toggleUnits()">
+                    <option value="metric">Metric (kg, cm)</option>
+                    <option value="imperial">Imperial (lbs, inches)</option>
+                </select>
+            </div>
+            <div class="input-row">
+                <div class="input-group">
+                    <label><span id="weightLabel">Weight (kg)</span></label>
+                    <input type="number" id="weight" step="0.1" placeholder="70" required>
+                </div>
+                <div class="input-group">
+                    <label><span id="heightLabel">Height (cm)</span></label>
+                    <input type="number" id="height" step="0.1" placeholder="170" required>
+                </div>
+            </div>
+            <button class="btn" onclick="calculateBMI()">Calculate BMI</button>
+            <div class="result-section" id="resultSection" style="text-align:center">
+                <div class="bmi-display" id="bmiValue">-</div>
+                <div class="category" id="category">-</div>
+                <div class="category-info" id="categoryInfo">-</div>
+                <div class="bmi-ranges">
+                    <h3>BMI Categories (kg/m²)</h3>
+                    <div class="range-item">
+                        <span>Underweight:</span>
+                        <span>&lt; 18.5</span>
+                    </div>
+                    <div class="range-item">
+                        <span>Normal weight:</span>
+                        <span>18.5 - 24.9</span>
+                    </div>
+                    <div class="range-item">
+                        <span>Overweight:</span>
+                        <span>25 - 29.9</span>
+                    </div>
+                    <div class="range-item">
+                        <span>Obese:</span>
+                        <span>≥ 30</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+        <!-- Middle AdSense Ad - Rectangle Unit -->
+        <div class="ad-container" style="text-align:center;margin:32px 0;min-height:250px">
+            <ins class="adsbygoogle"
+                 style="display:block;min-height:250px"
+                 data-ad-client="ca-pub-1594363786929335"
+                 data-ad-slot="6726353154"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+        </div>
+        
+        <!-- Bottom AdSense Ad - Vertical Unit -->
+        <div class="ad-container" style="text-align:center;margin:32px 0;min-height:600px">
+            <ins class="adsbygoogle"
+                 style="display:block;min-height:250px"
+                 data-ad-client="ca-pub-1594363786929335"
+                 data-ad-slot="4100189814"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+        </div>
+
+    <script src="/assets/js/tool-theme.js"></script>
+    <script>
+        function toggleUnits(){
+            const unit=document.getElementById('unit').value;
+            if(unit==='metric'){
+                document.getElementById('weightLabel').textContent='Weight (kg)';
+                document.getElementById('heightLabel').textContent='Height (cm)';
+                document.getElementById('weight').placeholder='70';
+                document.getElementById('height').placeholder='170';
+            }else{
+                document.getElementById('weightLabel').textContent='Weight (lbs)';
+                document.getElementById('heightLabel').textContent='Height (inches)';
+                document.getElementById('weight').placeholder='154';
+                document.getElementById('height').placeholder='67';
+            }
+        }
+        function calculateBMI(){
+            let weight=parseFloat(document.getElementById('weight').value);
+            let height=parseFloat(document.getElementById('height').value);
+            const unit=document.getElementById('unit').value;
+            if(!weight||!height||weight<=0||height<=0)return alert('Please enter valid weight and height values');
+            
+            let bmi;
+            if(unit==='metric')bmi=weight/Math.pow(height/100,2);
+            else bmi=(weight/Math.pow(height,2))*703;
+            
+            let category,info;
+            if(bmi<18.5){
+                category='Underweight';
+                info='You may need to gain weight. Consult with a healthcare provider.';
+            }else if(bmi<25){
+                category='Normal Weight';
+                info='You have a healthy body weight. Keep up the good work!';
+            }else if(bmi<30){
+                category='Overweight';
+                info='You may benefit from losing some weight. Consider diet and exercise.';
+            }else{
+                category='Obese';
+                info='Consult with a healthcare provider about weight management options.';
+            }
+            
+            document.getElementById('bmiValue').textContent=bmi.toFixed(1);
+            document.getElementById('category').textContent=category;
+            document.getElementById('categoryInfo').textContent=info;
+            document.getElementById('resultSection').classList.add('show');
+        }
+    </script>
+    <script>
+        // Initialize all AdSense ads
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</body>
+</html>
