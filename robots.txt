@@ -1,0 +1,13 @@
+# Robots.txt for Uniqon Group
+# Generated on 2025-12-17 04:14:28
+
+User-agent: *
+Allow: /
+Disallow: /assets/
+Disallow: /*.json$
+
+# Sitemap
+Sitemap: https://www.uniqongroup.co.uk/sitemap.xml
+
+# Crawl-delay for politeness
+Crawl-delay: 1

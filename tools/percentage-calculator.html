@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-adsense-account" content="ca-pub-1594363786929335">
+    <meta name="description" content="Calculate percentages, increases, decreases, and more">
+    <title>Percentage Calculator - Uniqon Group</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32.png">
+    <link rel="stylesheet" href="/assets/css/tool-style.css">
+    <style>
+        .result{margin-top:16px;padding:20px;background:var(--bg);border-radius:8px;text-align:center;font-size:32px;font-weight:700;color:var(--accent);display:none}
+        .result.show{display:block}
+    </style>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1594363786929335" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="brand">
+                <a href="/uk-news.html" class="brand">
+                    <img src="/assets/images/uniqonGroupLogo-200.png" alt="Uniqon Group" class="logo-img"/>
+                    <div>
+                        <div class="site-title">Uniqon Group</div>
+                        <div class="tag">Useful Tools</div>
+                    </div>
+                </a>
+            </div>
+            <nav id="mainNav" aria-label="Main navigation">
+                <a href="/uk-news.html">Home</a>
+                <a href="/trending.html">Trending</a>
+                <a href="/tools.html" class="active" aria-current="page">Tools</a>
+                <a href="/about-us.html">About</a>
+            </nav>
+            <div class="actions">
+                <button class="theme-toggle" id="themeToggle"><span id="themeIcon">🌙</span></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Top AdSense Ad - Horizontal Unit -->
+    <div class="ad-container" style="text-align:center;margin:24px auto;max-width:1200px;min-height:90px">
+        <ins class="adsbygoogle"
+             style="display:block;min-height:100px"
+             data-ad-client="ca-pub-1594363786929335"
+             data-ad-slot="1637678006"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+    </div>
+    
+    <div class="tool-container">
+        <a href="/tools.html" class="back-link">← Back to Tools</a>
+        <h1>Percentage Calculator</h1>
+        <p class="tool-description">Calculate percentages, increases, decreases, and percentage differences.</p>
+        <div class="tool-card">
+            <h3 style="margin-bottom:16px">What is X% of Y?</h3>
+            <div class="input-row">
+                <input type="number" id="pct1" placeholder="Percentage" style="padding:12px;background:var(--bg);border:1px solid var(--border);border-radius:8px;color:var(--text)">
+                <input type="number" id="val1" placeholder="Value" style="padding:12px;background:var(--bg);border:1px solid var(--border);border-radius:8px;color:var(--text)">
+            </div>
+            <button class="btn" onclick="calc1()">Calculate</button>
+            <div class="result" id="result1"></div>
+        </div>
+        <div class="tool-card">
+            <h3 style="margin-bottom:16px">X is what % of Y?</h3>
+            <div class="input-row">
+                <input type="number" id="val2a" placeholder="X value" style="padding:12px;background:var(--bg);border:1px solid var(--border);border-radius:8px;color:var(--text)">
+                <input type="number" id="val2b" placeholder="Y value" style="padding:12px;background:var(--bg);border:1px solid var(--border);border-radius:8px;color:var(--text)">
+            </div>
+            <button class="btn" onclick="calc2()">Calculate</button>
+            <div class="result" id="result2"></div>
+        </div>
+        <div class="tool-card">
+            <h3 style="margin-bottom:16px">Percentage Change (Increase/Decrease)</h3>
+            <div class="input-row">
+                <input type="number" id="old" placeholder="Old value" style="padding:12px;background:var(--bg);border:1px solid var(--border);border-radius:8px;color:var(--text)">
+                <input type="number" id="new" placeholder="New value" style="padding:12px;background:var(--bg);border:1px solid var(--border);border-radius:8px;color:var(--text)">
+            </div>
+            <button class="btn" onclick="calc3()">Calculate</button>
+            <div class="result" id="result3"></div>
+        </div>
+    </div>
+        
+        <!-- Middle AdSense Ad - Rectangle Unit -->
+        <div class="ad-container" style="text-align:center;margin:32px 0;min-height:250px">
+            <ins class="adsbygoogle"
+                 style="display:block;min-height:250px"
+                 data-ad-client="ca-pub-1594363786929335"
+                 data-ad-slot="6726353154"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+        </div>
+        
+        <!-- Bottom AdSense Ad - Vertical Unit -->
+        <div class="ad-container" style="text-align:center;margin:32px 0;min-height:600px">
+            <ins class="adsbygoogle"
+                 style="display:block;min-height:250px"
+                 data-ad-client="ca-pub-1594363786929335"
+                 data-ad-slot="4100189814"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+        </div>
+
+    <script src="/assets/js/tool-theme.js"></script>
+    <script>
+        function calc1(){
+            const p=parseFloat(document.getElementById('pct1').value),v=parseFloat(document.getElementById('val1').value);
+            if(!p||!v)return alert('Please enter both values');
+            document.getElementById('result1').textContent=((p/100)*v).toFixed(2);
+            document.getElementById('result1').classList.add('show');
+        }
+        function calc2(){
+            const a=parseFloat(document.getElementById('val2a').value),b=parseFloat(document.getElementById('val2b').value);
+            if(!a||!b)return alert('Please enter both values');
+            document.getElementById('result2').textContent=((a/b)*100).toFixed(2)+'%';
+            document.getElementById('result2').classList.add('show');
+        }
+        function calc3(){
+            const o=parseFloat(document.getElementById('old').value),n=parseFloat(document.getElementById('new').value);
+            if(!o||!n)return alert('Please enter both values');
+            document.getElementById('result3').textContent=(((n-o)/o)*100).toFixed(2)+'%';
+            document.getElementById('result3').classList.add('show');
+        }
+    </script>
+    <script>
+        // Initialize all AdSense ads
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</body>
+</html>

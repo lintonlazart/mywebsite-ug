@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Text Counter — Count Words, Characters & Paragraphs | Uniqon Group</title>
+    <meta name="description" content="Free Text Counter — instantly count words, characters (with/without spaces), sentences and paragraphs. Useful for writers, students and developers.">
+    <link rel="canonical" href="https://www.uniqongroup.co.uk/tools/text-counter.html">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Google AdSense (preserved exactly as is) -->
+    <meta name="google-adsense-account" content="ca-pub-1594363786929335">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1594363786929335" crossorigin="anonymous"></script>
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Text Counter — Count Words & Characters | Uniqon Group">
+    <meta property="og:description" content="Free Text Counter — quickly count words, characters, sentences and paragraphs. No signup required.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.uniqongroup.co.uk/tools/text-counter.html">
+    <meta property="og:image" content="https://www.uniqongroup.co.uk/assets/images/uniqonGroupLogo-200.png">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32.png">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/assets/css/tool-style.css">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Text Counter",
+      "url": "https://www.uniqongroup.co.uk/tools/text-counter.html",
+      "description": "Free Text Counter to instantly count words, characters, sentences and paragraphs. Works offline in your browser.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "All",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "GBP"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Uniqon Group",
+        "url": "https://www.uniqongroup.co.uk"
+      }
+    }
+    </script>
+    
+    <!-- FAQ Schema for Rich Snippets -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What's the difference between Characters and Characters (no spaces)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Characters counts every single character including spaces, punctuation, and line breaks. Characters (no spaces) only counts letters, numbers, and punctuation — excluding all whitespace."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How are words counted?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Words are counted by splitting text on whitespace (spaces, tabs, line breaks). Hyphenated words like state-of-the-art count as one word. Contractions like don't also count as one word."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is my text stored or sent anywhere?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No! This tool runs entirely in your web browser using JavaScript. Your text never leaves your device — it's not uploaded to any server, stored, or analyzed. Your content remains completely private."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does this work offline?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Once the page loads, the text counter works completely offline. You can disconnect from the internet and continue counting text. All processing happens locally in your browser."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use this for other languages?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! The text counter works with any language that uses spaces to separate words (English, Spanish, French, German, etc.). For languages without spaces (Chinese, Japanese, Thai), the word count may not be accurate, but character counts work perfectly."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="brand">
+                <a href="/uk-news.html" class="brand" aria-label="Uniqon Group home">
+                    <img src="/assets/images/uniqonGroupLogo-200.png" alt="Uniqon Group" class="logo-img"/>
+                    <div>
+                        <div class="site-title">Uniqon Group</div>
+                        <div class="tag">Useful Tools</div>
+                    </div>
+                </a>
+            </div>
+            <nav id="mainNav" aria-label="Main navigation">
+                <a href="/uk-news.html">Home</a>
+                <a href="/trending.html">Trending</a>
+                <a href="/tools.html" class="active" aria-current="page">Tools</a>
+                <a href="/about-us.html">About</a>
+            </nav>
+            <div class="actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" aria-pressed="false">
+                    <span id="themeIcon">🌙</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Top AdSense Ad - Horizontal Unit (preserved exactly as is) -->
+    <div class="ad-container" style="text-align:center;margin:24px auto;max-width:1200px;min-height:90px">
+        <ins class="adsbygoogle"
+             style="display:block;min-height:100px"
+             data-ad-client="ca-pub-1594363786929335"
+             data-ad-slot="1637678006"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+    </div>
+    
+    <main class="tool-container" id="maincontent">
+        <!-- Breadcrumb Navigation -->
+        <nav aria-label="Breadcrumb" style="margin-bottom:16px;font-size:14px;color:var(--muted)">
+            <a href="/uk-news.html" style="color:var(--accent);text-decoration:none">Home</a> › 
+            <a href="/tools.html" style="color:var(--accent);text-decoration:none">Tools</a> › 
+            <span>Text Counter</span>
+        </nav>
+        
+        <a href="/tools.html" class="back-link">← Back to Tools</a>
+        
+        <h1>Text Counter</h1>
+        
+        <p class="tool-description">Count words, characters, sentences, and paragraphs in real-time. Ideal for writers, students, editors and developers who need quick, accurate counts without installing software.</p>
+        
+        <!-- SEO Content Section -->
+        <section aria-labelledby="why-use" style="margin:24px 0;padding:20px;background:var(--card);border-radius:12px">
+            <h2 id="why-use" style="font-size:20px;margin-bottom:12px">Why use this Text Counter?</h2>
+            <p style="color:var(--muted);line-height:1.6">
+                The Text Counter provides instant counts for characters (with and without spaces), words, sentences and paragraphs. 
+                It is useful when preparing submissions with strict word limits (such as university essays, grant applications, or social media posts), 
+                or when you need to measure text length for SEO, metadata, or code comments. The tool works entirely in your browser — 
+                there is no upload to any server — so your work stays private and fast.
+            </p>
+        </section>
+        
+        <!-- Tool Interface -->
+        <section class="tool-card" aria-labelledby="tool-interface">
+            <h2 id="tool-interface" class="sr-only">Text Counter tool</h2>
+            <div class="input-group">
+                <label for="text">Enter or paste your text</label>
+                <textarea id="text" rows="10" placeholder="Type or paste your text here..." 
+                          aria-label="Text input for counting"
+                          style="width:100%;padding:12px;background:var(--bg);border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:16px;font-family:inherit;resize:vertical"></textarea>
+            </div>
+            
+            <div class="result-section show" role="region" aria-live="polite" aria-atomic="true">
+                <div class="result-item">
+                    <span class="result-label">Characters:</span>
+                    <span class="result-value" id="chars">0</span>
+                </div>
+                <div class="result-item">
+                    <span class="result-label">Characters (no spaces):</span>
+                    <span class="result-value" id="charsNoSpace">0</span>
+                </div>
+                <div class="result-item">
+                    <span class="result-label">Words:</span>
+                    <span class="result-value" id="words">0</span>
+                </div>
+                <div class="result-item">
+                    <span class="result-label">Sentences:</span>
+                    <span class="result-value" id="sentences">0</span>
+                </div>
+                <div class="result-item">
+                    <span class="result-label">Paragraphs:</span>
+                    <span class="result-value" id="paragraphs">0</span>
+                </div>
+            </div>
+        </section>
+        
+        <!-- How to Use Section -->
+        <section aria-labelledby="how-to-use" style="margin:32px 0;padding:20px;background:var(--card);border-radius:12px">
+            <h2 id="how-to-use" style="font-size:20px;margin-bottom:12px">How to Use</h2>
+            <ol style="color:var(--muted);line-height:1.8;padding-left:24px">
+                <li>Type or paste your text into the text area above</li>
+                <li>The character, word, sentence, and paragraph counts update automatically as you type</li>
+                <li>Use "Characters (no spaces)" for strict character limits that exclude whitespace</li>
+                <li>All processing happens in your browser — no data is sent to any server</li>
+            </ol>
+        </section>
+        
+        <!-- Sample Use Cases Section -->
+        <section aria-labelledby="use-cases" style="margin:32px 0;padding:20px;background:var(--card);border-radius:12px">
+            <h2 id="use-cases" style="font-size:20px;margin-bottom:12px">Sample Use Cases</h2>
+            <div style="color:var(--muted);line-height:1.6">
+                <h3 style="font-size:16px;margin-top:16px;margin-bottom:8px;color:var(--text)">📝 Academic Writing</h3>
+                <p style="margin-bottom:16px">
+                    <strong>Example:</strong> Your professor requires a 1,500-word essay. Paste your draft to verify you meet the word count requirement without going over the 1,600-word maximum. 
+                    The sentence counter helps ensure varied sentence length for better readability.
+                </p>
+                
+                <h3 style="font-size:16px;margin-top:16px;margin-bottom:8px;color:var(--text)">📱 Social Media Posts</h3>
+                <p style="margin-bottom:16px">
+                    <strong>Example:</strong> Twitter allows 280 characters per tweet. Use the character counter to craft your message and stay within limits. 
+                    Instagram captions work best under 2,200 characters — check before posting.
+                </p>
+                
+                <h3 style="font-size:16px;margin-top:16px;margin-bottom:8px;color:var(--text)">🔍 SEO Meta Descriptions</h3>
+                <p style="margin-bottom:16px">
+                    <strong>Example:</strong> Meta descriptions should be 150-160 characters. Use "Characters (no spaces)" to ensure your description displays properly in search results without truncation.
+                </p>
+                
+                <h3 style="font-size:16px;margin-top:16px;margin-bottom:8px;color:var(--text)">✉️ Email Subject Lines</h3>
+                <p style="margin-bottom:16px">
+                    <strong>Example:</strong> Email subject lines are most effective between 30-50 characters. Check your subject line length to maximize open rates across different email clients.
+                </p>
+                
+                <h3 style="font-size:16px;margin-top:16px;margin-bottom:8px;color:var(--text)">📄 Resume & Cover Letters</h3>
+                <p>
+                    <strong>Example:</strong> Many job applications have character limits for cover letters (often 2,000-5,000 characters). 
+                    Verify your application fits within requirements before submitting.
+                </p>
+            </div>
+        </section>
+        
+        <!-- FAQ Section -->
+        <section aria-labelledby="faq" style="margin:32px 0;padding:20px;background:var(--card);border-radius:12px">
+            <h2 id="faq" style="font-size:20px;margin-bottom:16px">Frequently Asked Questions</h2>
+            <div style="color:var(--muted);line-height:1.6">
+                <h3 style="font-size:16px;margin-top:16px;margin-bottom:8px;color:var(--text)">What's the difference between "Characters" and "Characters (no spaces)"?</h3>
+                <p style="margin-bottom:16px">
+                    "Characters" counts every single character including spaces, punctuation, and line breaks. "Characters (no spaces)" only counts letters, numbers, and punctuation — excluding all whitespace. 
+                    Some platforms like Twitter count spaces, while others like SMS messages may not.
+                </p>
+                
+                <h3 style="font-size:16px;margin-top:16px;margin-bottom:8px;color:var(--text)">How are words counted?</h3>
+                <p style="margin-bottom:16px">
+                    Words are counted by splitting text on whitespace (spaces, tabs, line breaks). "Hello world" = 2 words. Hyphenated words like "state-of-the-art" count as one word. 
+                    Contractions like "don't" also count as one word.
+                </p>
+                
+                <h3 style="font-size:16px;margin-top:16px;margin-bottom:8px;color:var(--text)">How does the sentence counter work?</h3>
+                <p style="margin-bottom:16px">
+                    Sentences are identified by periods (.), exclamation marks (!), and question marks (?). Multiple punctuation marks like "..." or "!!" are treated as a single sentence ending. 
+                    Empty sentences (just punctuation) are not counted.
+                </p>
+                
+                <h3 style="font-size:16px;margin-top:16px;margin-bottom:8px;color:var(--text)">How are paragraphs counted?</h3>
+                <p style="margin-bottom:16px">
+                    Paragraphs are identified by double line breaks (pressing Enter twice). A single line break doesn't create a new paragraph. 
+                    Empty paragraphs (only whitespace) are not counted.
+                </p>
+                
+                <h3 style="font-size:16px;margin-top:16px;margin-bottom:8px;color:var(--text)">Is my text stored or sent anywhere?</h3>
+                <p style="margin-bottom:16px">
+                    No! This tool runs entirely in your web browser using JavaScript. Your text never leaves your device — it's not uploaded to any server, stored, or analyzed. 
+                    Your content remains completely private.
+                </p>
+                
+                <h3 style="font-size:16px;margin-top:16px;margin-bottom:8px;color:var(--text)">Does this work offline?</h3>
+                <p style="margin-bottom:16px">
+                    Once the page loads, the text counter works completely offline. You can disconnect from the internet and continue counting text. 
+                    All processing happens locally in your browser.
+                </p>
+                
+                <h3 style="font-size:16px;margin-top:16px;margin-bottom:8px;color:var(--text)">What's the maximum text length?</h3>
+                <p style="margin-bottom:16px">
+                    There's no hard limit imposed by the tool itself. However, very large texts (over 100,000 characters) may slow down your browser. 
+                    For typical use cases (essays, articles, social posts), performance is instant.
+                </p>
+                
+                <h3 style="font-size:16px;margin-top:16px;margin-bottom:8px;color:var(--text)">Can I use this for other languages?</h3>
+                <p>
+                    Yes! The text counter works with any language that uses spaces to separate words (English, Spanish, French, German, etc.). 
+                    For languages without spaces (Chinese, Japanese, Thai), the word count may not be accurate, but character counts work perfectly.
+                </p>
+            </div>
+        </section>
+    </main>
+        
+    <!-- Middle AdSense Ad - Rectangle Unit (preserved exactly as is) -->
+    <div class="ad-container" style="text-align:center;margin:32px 0;min-height:250px">
+        <ins class="adsbygoogle"
+             style="display:block;min-height:250px"
+             data-ad-client="ca-pub-1594363786929335"
+             data-ad-slot="6726353154"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+    </div>
+    
+    <!-- Footer -->
+    <footer style="margin-top:48px;padding:24px;text-align:center;border-top:1px solid var(--border)">
+        <p style="color:var(--muted);font-size:14px">&copy; 2025 Uniqon Group. All rights reserved.</p>
+        <nav aria-label="Footer navigation" style="margin-top:8px">
+            <a href="/uk-news.html" style="color:var(--accent);text-decoration:none;margin:0 8px">Home</a>
+            <a href="/tools.html" style="color:var(--accent);text-decoration:none;margin:0 8px">Tools</a>
+            <a href="/about-us.html" style="color:var(--accent);text-decoration:none;margin:0 8px">About</a>
+        </nav>
+    </footer>
+        
+    <!-- Bottom AdSense Ad - Vertical Unit (preserved exactly as is) -->
+    <div class="ad-container" style="text-align:center;margin:32px 0;min-height:600px">
+        <ins class="adsbygoogle"
+             style="display:block;min-height:250px"
+             data-ad-client="ca-pub-1594363786929335"
+             data-ad-slot="4100189814"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+    </div>
+
+    <script src="/assets/js/tool-theme.js"></script>
+    <script>
+        document.getElementById('text').addEventListener('input',function(){
+            const text=this.value;
+            document.getElementById('chars').textContent=text.length;
+            document.getElementById('charsNoSpace').textContent=text.replace(/\s/g,'').length;
+            const words=text.trim()?text.trim().split(/\s+/).length:0;
+            document.getElementById('words').textContent=words;
+            const sentences=text.trim()?text.split(/[.!?]+/).filter(s=>s.trim()).length:0;
+            document.getElementById('sentences').textContent=sentences;
+            const paragraphs=text.trim()?text.split(/\n\n+/).filter(p=>p.trim()).length:0;
+            document.getElementById('paragraphs').textContent=paragraphs;
+        });
+    </script>
+    <script>
+        // Initialize all AdSense ads
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</body>
+</html>

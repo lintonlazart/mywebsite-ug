@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-adsense-account" content="ca-pub-1594363786929335">
+    <meta name="description" content="Calculate loan payments, interest, and amortization schedule">
+    <title>Loan Calculator - Uniqon Group</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32.png">
+    <link rel="stylesheet" href="/assets/css/tool-style.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1594363786929335" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="brand">
+                <a href="/uk-news.html" class="brand">
+                    <img src="/assets/images/uniqonGroupLogo-200.png" alt="Uniqon Group" class="logo-img"/>
+                    <div>
+                        <div class="site-title">Uniqon Group</div>
+                        <div class="tag">Useful Tools</div>
+                    </div>
+                </a>
+            </div>
+            <nav id="mainNav" aria-label="Main navigation">
+                <a href="/uk-news.html">Home</a>
+                <a href="/trending.html">Trending</a>
+                <a href="/tools.html" class="active" aria-current="page">Tools</a>
+                <a href="/about-us.html">About</a>
+            </nav>
+            <div class="actions">
+                <button class="theme-toggle" id="themeToggle"><span id="themeIcon">🌙</span></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Top AdSense Ad - Horizontal Unit -->
+    <div class="ad-container" style="text-align:center;margin:24px auto;max-width:1200px;min-height:90px">
+        <ins class="adsbygoogle"
+             style="display:block;min-height:100px"
+             data-ad-client="ca-pub-1594363786929335"
+             data-ad-slot="1637678006"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+    </div>
+    
+    <div class="tool-container">
+        <a href="/tools.html" class="back-link">← Back to Tools</a>
+        <h1>Loan Calculator</h1>
+        <p class="tool-description">Calculate monthly payments, total interest, and see an amortization breakdown.</p>
+        <div class="tool-card">
+            <div class="input-group">
+                <label for="principal">Loan Amount (£)</label>
+                <input type="number" id="principal" placeholder="200000" required>
+            </div>
+            <div class="input-row">
+                <div class="input-group">
+                    <label for="rate">Annual Interest Rate (%)</label>
+                    <input type="number" id="rate" step="0.01" placeholder="3.5" required>
+                </div>
+                <div class="input-group">
+                    <label for="years">Loan Term (Years)</label>
+                    <input type="number" id="years" placeholder="25" required>
+                </div>
+            </div>
+            <button class="btn" onclick="calculateLoan()">Calculate</button>
+            <div class="result-section" id="resultSection">
+                <div class="result-title">Results</div>
+                <div class="result-item">
+                    <span class="result-label">Monthly Payment:</span>
+                    <span class="result-value" id="monthly">-</span>
+                </div>
+                <div class="result-item">
+                    <span class="result-label">Total Interest:</span>
+                    <span class="result-value" id="totalInterest">-</span>
+                </div>
+                <div class="result-item">
+                    <span class="result-label">Total Paid:</span>
+                    <span class="result-value" id="totalPaid">-</span>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+        <!-- Middle AdSense Ad - Rectangle Unit -->
+        <div class="ad-container" style="text-align:center;margin:32px 0;min-height:250px">
+            <ins class="adsbygoogle"
+                 style="display:block;min-height:250px"
+                 data-ad-client="ca-pub-1594363786929335"
+                 data-ad-slot="6726353154"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+        </div>
+        
+        <!-- Bottom AdSense Ad - Vertical Unit -->
+        <div class="ad-container" style="text-align:center;margin:32px 0;min-height:600px">
+            <ins class="adsbygoogle"
+                 style="display:block;min-height:250px"
+                 data-ad-client="ca-pub-1594363786929335"
+                 data-ad-slot="4100189814"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+        </div>
+
+    <script src="/assets/js/tool-theme.js"></script>
+    <script>
+        function calculateLoan(){
+            const p=parseFloat(document.getElementById('principal').value);
+            const r=parseFloat(document.getElementById('rate').value)/100/12;
+            const n=parseFloat(document.getElementById('years').value)*12;
+            if(!p||!r||!n)return alert('Please enter all values');
+            const monthly=p*(r*Math.pow(1+r,n))/(Math.pow(1+r,n)-1);
+            const totalPaid=monthly*n;
+            const totalInterest=totalPaid-p;
+            document.getElementById('monthly').textContent='£'+monthly.toFixed(2);
+            document.getElementById('totalInterest').textContent='£'+totalInterest.toFixed(2);
+            document.getElementById('totalPaid').textContent='£'+totalPaid.toFixed(2);
+            document.getElementById('resultSection').classList.add('show');
+        }
+    </script>
+    <script>
+        // Initialize all AdSense ads
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</body>
+</html>
